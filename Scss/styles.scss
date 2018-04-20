@@ -78,4 +78,11 @@ header{
             }
         }
     }
+    li[data-status="true"]{
+      background-color: lightyellow;
+      .task-name{
+        text-decoration: line-through;
+        opacity: 0.5;
+      }
+    }
 }
