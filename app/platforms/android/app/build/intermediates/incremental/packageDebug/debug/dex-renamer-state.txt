@@ -1,0 +1,4 @@
+#Fri Apr 27 17:07:06 AEST 2018
+base.0=/Users/sen/Desktop/todolist18/app/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+file.0=/Users/sen/Desktop/todolist18/app/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex
