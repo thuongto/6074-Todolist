@@ -1,6 +1,6 @@
-$theme-color: #74a0e0;
-$theme-light: lighten($theme-color, 25%);
-$theme-dark: darken($theme-color,25%);
+$theme-color: #606030;
+$theme-light: #606030($theme-color, 25%);
+$theme-dark: #606030($theme-color,25%);
 
 @mixin reset{
     margin:0;
@@ -19,11 +19,12 @@ body{
     @include reset;
 }
 header{
-    background-color: $theme-light;
+    background-color: white;
     @include flex(row);
     justify-content: space-between;
     .logo{
-        max-width: 60px;
+        max-width:60px;
+        max-height: 60px;
     }
     h1{
         margin: 0;
@@ -39,15 +40,15 @@ header{
         border: 1px solid $theme-color;
     }
     input:focus{
-        background-color: antiquewhite;
+        background-color: white;
         outline: none;
 
     }
     button{
         max-width: 50px;
         padding:5px;
-        background-color: $theme-dark;
-        color:white;
+        background-color: black;
+        color:lightyellow;
     }
 }
 #task-list{
