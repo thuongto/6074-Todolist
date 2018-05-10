@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
 const taskform:HTMLFormElement = (<HTMLFormElement> document.getElementById('task-form'));
 taskform.addEventListener('submit',( event: Event) => {
   event.preventDefault();
-let input = document.getElementById('task-input');
+  let input = document.getElementById('task-input');
   let taskname:string = (<HTMLInputElement>input).value;
  // console.log(taskname);
  if(taskname.length> 0){
@@ -65,6 +65,19 @@ listelement.addEventListener('click',(event:Event) => {
     let target:HTMLElement = <HTMLElement> event.target;
     let id = getParentId( <Node> event.target);
       console.log(id);
+
+  if(target.getAttribute('data-function')== 'highlight'){
+      if(id){
+        let tag = document.getElementById(id);
+        if( (<HTMLInputElement>tag).style.backgroundColor == 'lightgreen'){
+          (<HTMLInputElement>tag).style.backgroundColor = 'white';}
+        else{
+          (<HTMLInputElement>tag).style.backgroundColor = 'lightgreen';
+        }
+
+      }
+  }
+
     if(target.getAttribute('data-function')== 'status'){
         if(id){
             taskmanager.changeStatus(id, () => {
@@ -72,8 +85,6 @@ listelement.addEventListener('click',(event:Event) => {
                 listview.clear();
                 listview.render(taskarray);
                 });
-                //listview.clear();
-               // listview.render(taskarray);
             });
         }
     }

@@ -10,9 +10,9 @@ header {
   header .logo {
     max-width: 60px;
     max-height: 60px; }
-  header h1 {
+  header h3 {
     margin: 0;
-    padding: 5px; }
+    padding: 10px; }
 
 #task-form {
   display: flex;
@@ -23,13 +23,15 @@ header {
     box-sizing: border-box;
     border: 1px solid #606030; }
   #task-form input:focus {
-    background-color: white;
+    background-color: lightyellow;
     outline: none; }
   #task-form button {
-    max-width: 50px;
-    padding: 5px;
-    background-color: black;
-    color: lightyellow; }
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    width: 100px;
+    /* Green */ }
 
 #task-list {
   margin: 0;
@@ -54,7 +56,7 @@ header {
           border: 1px solid transparent; }
         #task-list li .task-container .task-buttons button:focus {
           outline: none;
-          background-color: #cccccc; }
+          background-color: green; }
   #task-list li[data-status="true"] {
     background-color: lightyellow; }
     #task-list li[data-status="true"] .task-name {

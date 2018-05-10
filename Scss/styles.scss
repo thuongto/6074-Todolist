@@ -22,13 +22,14 @@ header{
     background-color: white;
     @include flex(row);
     justify-content: space-between;
+
     .logo{
         max-width:60px;
         max-height: 60px;
     }
-    h1{
+    h3{
         margin: 0;
-        padding: 5px;
+        padding: 10px;
     }
 }
 #task-form{
@@ -40,15 +41,21 @@ header{
         border: 1px solid $theme-color;
     }
     input:focus{
-        background-color: white;
+        background-color: lightyellow;
         outline: none;
 
     }
     button{
-        max-width: 50px;
-        padding:5px;
-        background-color: black;
-        color:lightyellow;
+      background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    width: 100px;
+    /* Green */
+        // max-width: 50px;
+        // padding:5px;
+        // background-color: grey;
+        // color:lightyellow;
     }
 }
 #task-list{
@@ -74,7 +81,7 @@ header{
                 }
                 button:focus{
                     outline: none;
-                    background-color: #cccccc;
+                    background-color: green;
                 }
             }
         }
