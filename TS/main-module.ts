@@ -69,10 +69,10 @@ listelement.addEventListener('click',(event:Event) => {
   if(target.getAttribute('data-function')== 'highlight'){
       if(id){
         let tag = document.getElementById(id);
-        if( (<HTMLInputElement>tag).style.backgroundColor == 'lightgreen'){
-          (<HTMLInputElement>tag).style.backgroundColor = 'white';}
+        if( (<HTMLInputElement>tag).style.backgroundColor == 'white'){
+          (<HTMLInputElement>tag).style.backgroundColor = '#ffda63';}
         else{
-          (<HTMLInputElement>tag).style.backgroundColor = 'lightgreen';
+          (<HTMLInputElement>tag).style.backgroundColor = 'white';
         }
 
       }

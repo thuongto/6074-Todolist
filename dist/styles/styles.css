@@ -2,43 +2,43 @@ body {
   margin: 0;
   padding: 0; }
 
-header {
-  background-color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  header .logo {
-    max-width: 60px;
-    max-height: 60px; }
-  header h3 {
-    margin: 0;
-    padding: 10px; }
+header .logo {
+  max-width: 150px;
+  max-height: 150px;
+  display: block;
+  margin: 0 auto; }
 
 #task-form {
   display: flex;
   flex-direction: row; }
   #task-form input {
     flex: 1;
-    padding: 5px;
-    box-sizing: border-box;
-    border: 1px solid #606030; }
+    padding: 12px;
+    border-radius: 7px;
+    border: 1px solid #5e61a3;
+    background-color: transparent; }
   #task-form input:focus {
-    background-color: lightyellow;
-    outline: none; }
+    border-radius: 7px;
+    background-color: #FFF8DC;
+    color: #1b2485; }
   #task-form button {
-    background-color: white;
+    background-color: transparent;
     color: black;
-    border: 2px solid #4CAF50;
+    border: 1px solid #1b2485;
     border-radius: 10px;
-    width: 100px;
-    /* Green */ }
+    width: 80px; }
+  #task-form button:hover {
+    background-color: #1b2485;
+    color: #FFF8DC; }
 
 #task-list {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  padding: 5px;
+  color: #1b2485; }
   #task-list li {
-    border-bottom: 1px solid #cccccc; }
+    border-bottom: 0.5px solid  #5e61a3; }
     #task-list li .task-container {
       display: flex;
       flex-direction: row;
@@ -49,16 +49,20 @@ header {
         display: flex;
         flex-direction: row; }
         #task-list li .task-container .task-buttons button {
-          width: 48px;
-          height: 48px;
+          width: 40px;
+          height: 50px;
           font-size: 1.5em;
           background-color: transparent;
-          border: 1px solid transparent; }
+          border: 3px solid transparent;
+          color: #1b2485; }
         #task-list li .task-container .task-buttons button:focus {
           outline: none;
-          background-color: green; }
+          background-color: transparent; }
+        #task-list li .task-container .task-buttons button:hover {
+          background-color: transparent;
+          color: #ff1400; }
   #task-list li[data-status="true"] {
-    background-color: lightyellow; }
+    color: #ff1400; }
     #task-list li[data-status="true"] .task-name {
       text-decoration: line-through;
       opacity: 0.5; }

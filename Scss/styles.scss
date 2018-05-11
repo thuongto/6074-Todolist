@@ -19,52 +19,51 @@ body{
     @include reset;
 }
 header{
-    background-color: white;
-    @include flex(row);
-    justify-content: space-between;
-
     .logo{
-        max-width:60px;
-        max-height: 60px;
-    }
-    h3{
-        margin: 0;
-        padding: 10px;
+        max-width:150px;
+        max-height: 150px;
+        display:block;
+        margin: 0 auto;
     }
 }
 #task-form{
     @include flex(row);
     input{
         flex:1;
-        padding: 5px;
-        box-sizing: border-box;
-        border: 1px solid $theme-color;
+        padding: 12px;
+        border-radius: 7px;
+        border: 1px solid #5e61a3 ;
+        background-color: transparent;
     }
+    //add a task section
     input:focus{
-        background-color: lightyellow;
-        outline: none;
+        //border-color: #5e61a3;
+        border-radius: 7px;
+        background-color: #FFF8DC;
+        color:#1b2485;
 
     }
+    //button add
     button{
-      background-color: white;
-    color: black;
-    border: 2px solid #4CAF50;
-    border-radius: 10px;
-    width: 100px;
-    /* Green */
-        // max-width: 50px;
-        // padding:5px;
-        // background-color: grey;
-        // color:lightyellow;
+      background-color: transparent ;
+      color:black;
+      border: 1px solid #1b2485 ;
+      border-radius: 10px;
+      width: 80px;
+    }
+    button:hover{
+      background-color: #1b2485;
+      color: #FFF8DC;
     }
 }
 #task-list{
     @include reset;
     list-style: none;
+    padding: 5px;
+    color: #1b2485;
     li{
-
-        border-bottom: 1px solid #cccccc;
-        .task-container{
+        border-bottom: 0.5px solid  #5e61a3;
+            .task-container{
             @include flex(row);
             justify-content: space-between;
             .task-name{
@@ -73,24 +72,30 @@ header{
             .task-buttons{
                 @include flex(row);
                 button{
-                    width: 48px;
-                    height: 48px;
+                    width: 40px;
+                    height: 50px;
                     font-size: 1.5em;
                     background-color: transparent;
-                    border: 1px solid transparent;
+                    border: 3px solid transparent;
+                    color:#1b2485;
                 }
                 button:focus{
                     outline: none;
-                    background-color: green;
+                    background-color: transparent;
+                }
+                button:hover{
+                  background-color: transparent;
+                  color: #ff1400;
                 }
             }
         }
     }
     li[data-status="true"]{
-      background-color: lightyellow;
+      color:#ff1400;
       .task-name{
         text-decoration: line-through;
         opacity: 0.5;
+
       }
     }
 }

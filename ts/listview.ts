@@ -13,7 +13,7 @@ export class ListView{
                             <div class="task-container">
                                 <div class="task-name">${name}</div>
                             <div class="task-buttons">
-                                <button type="button" data-function="highlight">highlight</button>
+                                <button type="button" data-function="highlight">&#10025</button>
                                 <button type="button" data-function="status">&#10003;</button>
                                 <button type="button" data-function="delete">&#10007;</button>
             </div>
